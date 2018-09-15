@@ -145,8 +145,16 @@ a:hover {
   
 .navbar a {
 	font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    	font-weight: 500;
+    	letter-spacing: 1px;
+}
+
+.navbar-nav > li > a {
+	padding: 0;
+}
+
+.nav > li > a {
+	margin: 10px 15px;
 }
 
 .navbar-custom.scrolled {
@@ -207,17 +215,17 @@ a:hover {
 
 .underline {
 	color: #000;
-    display: inline-block;
-    text-decoration: none;
+    	display: inline-block;
+    	text-decoration: none;
 }
 
 .underline::after {
 	background: #000;
 	display: block;	
-    content: '';
-    height: 1.4px;
-    width: 0;
-    transition: width .3s;
+    	content: '';
+    	height: 1.4px;
+    	width: 0;
+    	transition: width .3s;
 }
 
 .underline:hover:after {
@@ -420,5 +428,11 @@ a:hover {
 	}
 	.social-media-bar a {
 		padding: 0px 15px;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar-nav > li > a {
+		padding: 0;
 	}
 }
