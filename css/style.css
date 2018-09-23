@@ -336,6 +336,10 @@ a:hover {
 }
 
 /* Individual Work Descriptions */
+.post-content {
+    padding: 2% 0;
+}
+
 .description {
     float: left;
     padding: 0 10pt 60pt 0;
