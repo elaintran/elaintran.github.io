@@ -375,6 +375,10 @@ a:hover {
     background-color: black;
 }
 
+.click:focus {
+    outline: none;
+}
+
 .click i {
     letter-spacing: 10px;
 }
