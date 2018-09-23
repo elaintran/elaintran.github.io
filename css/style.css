@@ -337,7 +337,9 @@ a:hover {
 
 /* Individual Work Descriptions */
 .post-content {
-    padding: 7% 0;
+    padding: 7% 0 6%;
+    overflow: auto;
+    margin: 0;
 }
 
 .description {
@@ -348,8 +350,29 @@ a:hover {
 
 .tags {
     width: 25%;
-    padding: 0 10pt 0pt 0;
+    padding: 0 10pt 30pt 0;
     float: right;
+}
+
+.project-link {
+    text-align: center;
+}
+
+.click {
+    background-color: white;
+    border: 1.5px solid black;
+    padding: 10px 15px;;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.click:hover {
+    color: white;
+    background-color: black;
+}
+
+.click i {
+    letter-spacing: 10px;
 }
 
 /* Daily UI Gallery */
