@@ -358,6 +358,10 @@ a:hover {
     text-align: center;
 }
 
+.project-link a {
+    color: black;
+}
+
 .click {
     background-color: white;
     border: 1.5px solid black;
