@@ -11,3 +11,4 @@ Bootstrap
 <p>Create modal for Daily UI</p>
 <p>Update Resume</p>
 <p>Update "Works" section</p>
+<p>Create toggle for tags</p>
