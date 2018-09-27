@@ -1,12 +1,12 @@
 # elaintran.github.io
 Personal UI and web design portfolio. Work in progress.
-## Languages
+### Languages
 HTML5, CSS3
-## Library
+### Library
 jQuery
-## Framework
+### Framework
 Bootstrap
-## Future Updates
+### Future Updates
 <p>Connect email</p>
 <p>Create modal for Daily UI</p>
 <p>Update Resume</p>
