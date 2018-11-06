@@ -251,7 +251,7 @@ a:hover {
 }
 
 .portfolio-section .col-sm-6 {
-    padding: 0;
+    padding: 0 20px 20px 0;
 }
 
 .row {
@@ -261,10 +261,6 @@ a:hover {
 .columns {
     display: flex;
     flex-wrap: wrap;
-}
-
-.project .col-sm-6 {
-    padding: 0 20px 20px 0;
 }
 
 .project *, .gallery-item * {
