@@ -280,9 +280,9 @@ a:hover {
     position: absolute;
     align-items: center;
     top: 0;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
-    right: 0;
+    right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -310,9 +310,9 @@ a:hover {
 .project a, .gallery-item a {
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
-    right: 0;
+    right: 20px;
     z-index: 1;
 }
 
