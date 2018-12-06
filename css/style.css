@@ -356,10 +356,12 @@ a:hover {
 
 .project-link {
     text-align: center;
+    user-select: none;
 }
 
 .project-link a {
     color: black;
+    margin: 10px;
 }
 
 .click {
