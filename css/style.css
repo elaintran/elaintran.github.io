@@ -233,6 +233,44 @@ a:hover {
     transition: width .3s;
 }
 
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*Tags*/
+.index-tag {
+    margin: 0px 10px 20px 0;
+    padding: 2px 15px;
+    /*border: 1px solid black;*/
+    border-radius: 20px;
+}
+
+.index-tag:hover, .active {
+    background-color: #f4f4f5;
+    cursor: pointer;
+}
+
+.index-tag h6 {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.project-tag {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.project-tag .index-tag {
+    margin: 30px 10px 0px 0px;
+}
+
+.project-tag .tag-list {
+    justify-content: center;
+}
+
 /* Portfolio */
 .intro {
     text-align: center;
@@ -468,9 +506,26 @@ a:hover {
     background-color: transparent;
 }
 
-@media (min-width: 768px) {
-    .navbar-nav > li > a {
-    padding: 0;
+@media (max-width: 414px) {
+    .description, .tags {
+        padding: 0;
+        width: 100%;
+        float: none;
+    }
+    .project-link a {
+        margin: 3px;
+    }
+    .click {
+        padding: 10px 9px;
+    }
+    .project-tag .index-tag {
+        margin: 10px 10px 0px 0px;
+    }
+}
+
+@media (max-width: 667px) {
+    h1 {
+    font-size: 2.3em;
     }
 }
 
@@ -491,57 +546,9 @@ a:hover {
     }
 }
 
-@media (max-width: 667px) {
-    h1 {
-    font-size: 2.3em;
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+    padding: 0;
     }
 }
 
-@media (max-width: 414px) {
-    .description, .tags {
-        padding: 0;
-        width: 100%;
-        float: none;
-    }
-    .project-link a {
-        margin: 3px;
-    }
-    .click {
-        padding: 10px 9px;
-    }
-}
-
-.tag-list {
-    display: flex;
-    align-items: center;
-}
-
-.index-tag {
-    margin: 0px 10px 20px 0;
-    padding: 2px 15px;
-    /*border: 1px solid black;*/
-    border-radius: 20px;
-}
-
-.index-tag:hover, .active {
-    background-color: #f4f4f5;
-    cursor: pointer;
-}
-
-.index-tag h6 {
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 13px;
-}
-
-.project-tag {
-    width: 100%;
-}
-
-.project-tag .index-tag {
-    margin: 30px 10px 0px 0px;
-}
-
-.project-tag .tag-list {
-    justify-content: center;
-}
