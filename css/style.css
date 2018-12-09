@@ -384,6 +384,30 @@ a:hover {
     letter-spacing: 10px;
 }
 
+/*Project List*/
+.project-list {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.project-list a {
+    color: black;
+    text-decoration: none;
+}
+
+.project-list p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.project-list a:hover {
+    color: #337ab7;
+}
+
+.project-list .current-page {
+    color: #337ab7;
+}
+
 /* Daily UI Gallery */
 .gallery {
     margin-bottom: 30px;
