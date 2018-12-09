@@ -444,17 +444,9 @@ a:hover {
     background-color: transparent;
 }
 
-@media (max-width: 414px) {
-    .description, .tags {
-        padding: 0;
-        width: 100%;
-        float: none;
-    }
-}
-
-@media (max-width: 667px) {
-    h1 {
-    font-size: 2.3em;
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+    padding: 0;
     }
 }
 
@@ -475,8 +467,22 @@ a:hover {
     }
 }
 
-@media (min-width: 768px) {
-    .navbar-nav > li > a {
-    padding: 0;
+@media (max-width: 667px) {
+    h1 {
+    font-size: 2.3em;
+    }
+}
+
+@media (max-width: 414px) {
+    .description, .tags {
+        padding: 0;
+        width: 100%;
+        float: none;
+    }
+    .project-link a {
+        margin: 3px;
+    }
+    .click {
+        padding: 10px 9px;
     }
 }
