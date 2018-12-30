@@ -41,9 +41,9 @@ body, html {
     width: 100%;
 }
 
-p {
+p, li {
     font-size: 15px;
-    font-weight: 100;
+    /*font-weight: 100;*/
     letter-spacing: 0.8px;
     line-height: 170%;
 }
@@ -239,6 +239,40 @@ a:hover {
     align-items: center;
 }
 
+/*Splash*/
+.inner-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.splash .basic-info {
+    font-family: "Work Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.splash .sub-info {
+    font-family: "Work Sans", sans-serif;
+    line-height: 49px;
+    margin-bottom: 0;
+}
+
+.down {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.splash a {
+    color: black;
+}
+
 /*Tags*/
 .index-tag {
     margin: 0px 10px 20px 0;
@@ -277,8 +311,15 @@ a:hover {
     padding-bottom: 30px;
 }
 
-.portfolio-section, .about-section {
+.portfolio-section {
+    padding: 50px 0 0 0;
+}
+
+.about-section {
     padding: 110px 0 0 0;
+}
+
+.portfolio-section, .about-section {
     width: 100%;
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 2s;
@@ -383,6 +424,12 @@ a:hover {
     float: left;
     padding: 0 10pt 0pt 0;
     /*width: 70%;*/
+}
+
+.description h4 {
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .tags {
