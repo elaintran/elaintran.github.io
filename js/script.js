@@ -47,12 +47,9 @@ $(document).ready(function() {
     var target = this.hash; // Stores hash as target
     var $target = $(target); // Turns target dest. into a jQuery object
 
-    $('html, body').animate({
+    $('html, body').stop(true).animate({
       'scrollTop': $target.offset().top - 50
-    }, 500, 'swing', function() { 
-    	offsetAnchor();
-      window.location.hash = target;
-    });
+    }, 500, 'swing');
   });
 });
 
