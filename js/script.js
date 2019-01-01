@@ -4,22 +4,26 @@ $(document).ready(function() {
 		$(".code-tag").removeClass("active");
 		$(".all-tag").addClass("active");
 		$(".design-tag").removeClass("active");
-		$(".design").show();
-		$(".code").show();
+		$(".design").hide();
+		$(".code").hide();
+		$(".code").fadeIn(500);
+		$(".design").fadeIn(500);
 	})
 	$(".code-tag").click(function() {
-		$(".code").show();
+		$(".code").hide();
 		$(".design").hide();
 		$(".code-tag").addClass("active");
 		$(".all-tag").removeClass("active");
 		$(".design-tag").removeClass("active");
+		$(".code").fadeIn(500);
 	})
 	$(".design-tag").click(function() {
-		$(".design").show();
+		$(".design").hide();
 		$(".code").hide();
 		$(".design-tag").addClass("active");
 		$(".all-tag").removeClass("active");
 		$(".code-tag").removeClass("active");
+		$(".design").fadeIn(500);
 	})
 })
 
