@@ -33,13 +33,6 @@ $(document).ready(function () {
   });
 });
 
-// The function actually applying the offset
-function offsetAnchor() {
-  if (location.hash.length !== 0) {
-    window.scrollTo(window.scrollX, window.scrollY - 50);
-  }
-}
-
 $(document).ready(function() {
   $('a[href^="#"]').on('click', function(e) {
     e.preventDefault();
@@ -52,6 +45,3 @@ $(document).ready(function() {
     }, 500, 'swing');
   });
 });
-
-// Set the offset when entering page with hash present in the url
-window.setTimeout(offsetAnchor, 0);

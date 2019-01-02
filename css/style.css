@@ -591,6 +591,9 @@ a:hover {
     .social-media-bar a {
     padding: 0px 15px;
     }
+    nav > li > a {
+    margin: 30px 15px;
+    }
 }
 
 @media (min-width: 768px) {
