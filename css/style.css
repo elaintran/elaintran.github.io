@@ -67,6 +67,11 @@ a:hover {
     text-decoration: none;
 }
 
+code {
+    color: #337ab7;
+    background-color: #f2f4f9;
+}
+
 /* Navigation Bar */
 .navbar-custom {
     transition: 500ms ease;

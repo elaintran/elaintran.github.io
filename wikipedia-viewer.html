@@ -75,7 +75,10 @@
 						<li>I can click a button to see a random Wikipedia entry.</li>
 					</ul>
 					<h4><b>Development Process</b></h4>
-					<p>Currently in progress. Check back later.</p>
+					<p>For this project, <a href="https://jqueryui.com/autocomplete/" target="_blank">jQuery UI
+					Autocomplete</a> makes an AJAX call to the <a href="https://www.mediawiki.org/wiki/API%3aOpensearch" target="_blank">Opensearch API</a> and uses the information to provide search suggestions when typing into the search field.</p>
+					<p>In order to perform a search, the search input is taken, trimmed of white space, and placed as a value in the API link. In this case, <code>action=query</code> is used over <code>action=opensearch</code> when making a call for search results because it retrieves more information regarding the wiki while the latter is more limited.</p>
+					<p>The search form will not submitted when the search input length is zero. Along with this, if there are no matching results, the page will throw an error page.</p>
 				</div>
 			</div>
 			<div class="project-link">
