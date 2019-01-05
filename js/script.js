@@ -27,12 +27,14 @@ $(document).ready(function() {
 	})
 })
 
+//close mobile menu on click
 $(document).ready(function () {
   $(".navbar-nav li a").click(function(event) {
     $(".navbar-collapse").collapse('hide');
   });
 });
 
+//smooth scrolling
 $(document).ready(function() {
   $('a[href^="#"]').on('click', function(e) {
     e.preventDefault();
