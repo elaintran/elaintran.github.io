@@ -464,6 +464,7 @@ code {
 .click:hover {
     color: white;
     background-color: black;
+    transition: 0.5s;
 }
 
 .click:focus {
