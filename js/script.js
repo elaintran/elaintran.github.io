@@ -43,7 +43,7 @@ $(document).ready(function() {
     var $target = $(target); // Turns target dest. into a jQuery object
 
     $('html, body').stop(true).animate({
-      'scrollTop': $target.offset().top - 50
+      'scrollTop': $target.offset().top - 100
     }, 500, 'swing');
   });
 });
