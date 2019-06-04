@@ -209,6 +209,7 @@ code {
 
 .project-tag .tag-list {
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Portfolio */
