@@ -429,11 +429,11 @@ code {
     background-color: transparent;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .navbar-nav > li > a {
         padding: 0;
     }
-}
+} */
 
 @media (max-width: 767px) {
     .navbar-nav a {
@@ -448,7 +448,7 @@ code {
         text-align: center;
     }
     .social-media-bar a {
-        padding: 0px 15px;
+        margin: 0px 15px;
     }
 }
 
