@@ -1,46 +1,31 @@
-//tag toggle
 $(document).ready(function() {
-	$(".all-tag").click(function() {
-		$(".code-tag").removeClass("active");
-		$(".all-tag").addClass("active");
-		$(".design-tag").removeClass("active");
-		$(".design").hide();
-		$(".code").hide();
-		$(".code").fadeIn(500);
-		$(".design").fadeIn(500);
-	})
-	$(".code-tag").click(function() {
-		$(".code").hide();
-		$(".design").hide();
-		$(".code-tag").addClass("active");
-		$(".all-tag").removeClass("active");
-		$(".design-tag").removeClass("active");
-		$(".code").fadeIn(500);
-	})
-	$(".design-tag").click(function() {
-		$(".design").hide();
-		$(".code").hide();
-		$(".design-tag").addClass("active");
-		$(".all-tag").removeClass("active");
-		$(".code-tag").removeClass("active");
+	//tag toggle
+	$(".all-tag").on("click", function() {
+		activeTags(".all-tag", ".code-tag", ".design-tag", ".code", ".design");
 		$(".design").fadeIn(500);
 	})
 
+	$(".code-tag").on("click", function() {
+		activeTags(".code-tag", ".all-tag", ".design-tag", ".code", ".design");
+	})
 
-//close mobile menu on click
-  $(".navbar-nav li a").click(function(event) {
-    $(".navbar-collapse").collapse('hide');
-  });
+	$(".design-tag").on("click", function() {
+		activeTags(".design-tag", ".all-tag", ".code-tag", ".design", ".code");
+	})
 
-//smooth scrolling
-  $('a[href^="#"]').on('click', function(e) {
-    e.preventDefault();
+	function activeTags(activeTag, inactiveTagOne, inactiveTagTwo, hiddenTagOne, hiddenTagTwo) {
+		$(activeTag).addClass("active");
+		$(inactiveTagOne).removeClass("active");
+		$(inactiveTagTwo).removeClass("active");
+		$(hiddenTagOne).hide();
+		$(hiddenTagTwo).hide();
+		$(hiddenTagOne).fadeIn(500);
+	}
 
-    var target = this.hash; // Stores hash as target
-    var $target = $(target); // Turns target dest. into a jQuery object
-
-    $('html, body').stop(true).animate({
-      'scrollTop': $target.offset().top - 100
-    }, 500, 'swing');
-  });
-});
+	//smooth scrolling
+	$(".fa-angle-down").on("click", function() {
+		$("html, body").animate({
+			"scrollTop": $(this).offset().top
+		})
+	})
+})
