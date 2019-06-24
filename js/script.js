@@ -1,5 +1,54 @@
-//tag toggle
 $(document).ready(function() {
+	//display project information onto page
+	var projects = [
+		{
+			title: "EventBite",
+			category: "Web Development",
+			type: "code",
+			image: "images/eventbite.png",
+			link: "eventbite.html"
+		},
+		{
+			title: "Train Scheduler",
+			category: "Web Development",
+			type: "code",
+			image: "images/train-scheduler.png",
+			link: "train-scheduler.html"
+		},
+		{
+			title: "Wikipedia Viewer",
+			category: "Web Development",
+			type: "code",
+			image: "images/wikipedia-viewer3.png",
+			link: "wikipedia-viewer.html"
+		},
+		{
+			title: "Daily UI Challenge",
+			category: "Visual Design",
+			type: "design",
+			image: "images/daily-ui-day-one2.png",
+			link: "daily-ui-challenge.html"
+		},
+	]
+
+	function projectDisplay() {
+		for (var i = 0; i < projects.length; i++) {
+			var col = $("<div>").addClass("col-sm-6 " + projects[i].type);
+			var projectContent = $("<div>").addClass("project project-item");
+			var img = $("<img>").attr("src", projects[i].image).addClass("category__image");
+			var link = $("<a>").attr("href", projects[i].link);
+			var projectName = $("<h3>").text(projects[i].title);
+			var projectCategory = $("<h5>").text(projects[i].category);
+			var figcaption = $("<figcaption>").append(projectName).append(projectCategory);
+			link.append(figcaption);
+			projectContent.append(img).append(link);
+			col.append(projectContent);
+			$("#portfolio .row").append(col);
+		}
+	}
+	projectDisplay();
+
+	//tag toggle
 	$(".all-tag").on("click", function() {
 		activeTags(".all-tag", ".code-tag", ".design-tag", ".code", ".design");
 		$(".design").fadeIn(500);
