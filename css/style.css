@@ -246,7 +246,7 @@ code {
     width: 100%;
     text-align: center;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.3s;
     z-index: 1;
 }
 
@@ -276,9 +276,13 @@ code {
     transform: translateY(0);
 }
 
-.project:hover > img {
+.project img {
+    transition: 0.3s;
+}
+
+.project:hover img {
     opacity: 0.1;
-    transition: 100ms;
+    transition: 0.4s;
 }
 
 .category__image {
