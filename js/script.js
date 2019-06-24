@@ -1,5 +1,5 @@
+//tag toggle
 $(document).ready(function() {
-	//tag toggle
 	$(".all-tag").on("click", function() {
 		activeTags(".all-tag", ".code-tag", ".design-tag", ".code", ".design");
 		$(".design").fadeIn(500);
@@ -23,9 +23,11 @@ $(document).ready(function() {
 	}
 
 	//smooth scrolling
-	$(".fa-angle-down").on("click", function() {
+	$("a[href^='#']").on("click", function() {
+		var target = $(this).attr("href");
+
 		$("html, body").animate({
-			"scrollTop": $(this).offset().top
-		})
-	})
+			"scrollTop": $(target).offset().top - 100
+		});
+	});
 })
