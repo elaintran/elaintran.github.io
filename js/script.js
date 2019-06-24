@@ -25,9 +25,14 @@ $(document).ready(function() {
 	//smooth scrolling
 	$("a[href^='#']").on("click", function() {
 		var target = $(this).attr("href");
-
 		$("html, body").animate({
 			"scrollTop": $(target).offset().top - 100
 		});
 	});
 })
+
+if (location.hash === "#portfolio") {
+	$("html, body").animate({
+		"scrollTop": $(location.hash).offset().top - 100
+	});
+}
