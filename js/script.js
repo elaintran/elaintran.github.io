@@ -45,6 +45,12 @@ $(document).ready(function() {
 			col.append(projectContent);
 			$("#portfolio .row").append(col);
 		}
+		//scroll down to portfolio section
+		setTimeout(function() {
+			$("html, body").animate({
+				"scrollTop": $(location.hash).offset().top - 100
+			});
+		}, 1)
 	}
 	projectDisplay();
 
@@ -71,7 +77,7 @@ $(document).ready(function() {
 		$(hiddenTagOne).fadeIn(500);
 	}
 
-	//smooth scrolling
+	//smooth scrolling on index page
 	$("a[href^='#']").on("click", function() {
 		var target = $(this).attr("href");
 		$("html, body").animate({
@@ -80,8 +86,9 @@ $(document).ready(function() {
 	});
 })
 
-if (location.hash === "#portfolio") {
-	$("html, body").animate({
-		"scrollTop": $(location.hash).offset().top - 100
-	});
+//prevent from jumping to the hash immediately on load
+if (location.hash) {
+	setTimeout(function() {
+	  window.scrollTo(0, 0);
+	}, 1);
 }
