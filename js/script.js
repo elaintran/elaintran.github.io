@@ -2,6 +2,13 @@ $(document).ready(function() {
 	//display project information onto page
 	var projects = [
 		{
+			title: "LIRI",
+			category: "Web Development",
+			type: "code",
+			image: "images/liri-node-app.png",
+			link: "#"
+		},
+		{
 			title: "EventBite",
 			category: "Web Development",
 			type: "code",
