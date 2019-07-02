@@ -2,6 +2,13 @@ $(document).ready(function() {
 	//display project information onto page
 	var projects = [
 		{
+			title: "Bamazon",
+			category: "Web Development",
+			type: "code",
+			image: "images/bamazon.png",
+			link: "bamazon.html"
+		},
+		{
 			title: "EventBite",
 			category: "Web Development",
 			type: "code",
