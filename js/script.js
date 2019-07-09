@@ -2,11 +2,11 @@ $(document).ready(function() {
 	//display project information onto page
 	var projects = [
 		{
-			title: "Bamazon",
+			title: "FriendFinder",
 			category: "Web Development",
 			type: "code",
-			image: "images/bamazon.png",
-			link: "bamazon.html"
+			image: "images/friendfinder.png",
+			link: "friendfinder.html"
 		},
 		{
 			title: "EventBite",
@@ -22,13 +22,13 @@ $(document).ready(function() {
 			image: "images/train-scheduler.png",
 			link: "train-scheduler.html"
 		},
-		{
-			title: "Wikipedia Viewer",
-			category: "Web Development",
-			type: "code",
-			image: "images/wikipedia-viewer3.png",
-			link: "wikipedia-viewer.html"
-		},
+		// {
+		// 	title: "Wikipedia Viewer",
+		// 	category: "Web Development",
+		// 	type: "code",
+		// 	image: "images/wikipedia-viewer3.png",
+		// 	link: "wikipedia-viewer.html"
+		// },
 		{
 			title: "Daily UI Challenge",
 			category: "Visual Design",
@@ -36,7 +36,7 @@ $(document).ready(function() {
 			image: "images/daily-ui-day-one2.png",
 			link: "daily-ui-challenge.html"
 		},
-	]
+	];
 
 	function projectDisplay() {
 		for (var i = 0; i < projects.length; i++) {
