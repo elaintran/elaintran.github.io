@@ -2,11 +2,11 @@ $(document).ready(function() {
 	//display project information onto page
 	var projects = [
 		{
-			title: "FriendFinder",
+			title: "Burger",
 			category: "Web Development",
 			type: "code",
-			image: "images/friendfinder.png",
-			link: "friendfinder.html"
+			image: "images/burger.png",
+			link: "burger.html"
 		},
 		{
 			title: "EventBite",
