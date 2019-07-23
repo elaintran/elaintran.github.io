@@ -2,10 +2,17 @@ $(document).ready(function() {
 	//display project information onto page
 	var projects = [
 		{
+			title: "Heroes United",
+			category: "Web Development",
+			type: "code",
+			image: "images/heroes-united.png",
+			link: "heroes-united.html"
+		},
+		{
 			title: "Burger",
 			category: "Web Development",
 			type: "code",
-			image: "images/burger.png",
+			image: "images/burger2.png",
 			link: "burger.html"
 		},
 		{
