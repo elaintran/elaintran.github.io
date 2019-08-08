@@ -2,6 +2,13 @@ $(document).ready(function() {
 	//display project information onto page
 	var projects = [
 		{
+			title: "BookTracker",
+			category: "Web Development",
+			type: "code",
+			image: "images/booktracker.png",
+			link: "booktracker.html"
+		},
+		{
 			title: "Delish Scraper",
 			category: "Web Development",
 			type: "code",
