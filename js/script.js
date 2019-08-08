@@ -3,53 +3,46 @@ $(document).ready(function() {
 	var projects = [
 		{
 			title: "BookTracker",
-			category: "Web Development",
+			category: "Full Stack Development",
 			type: "code",
 			image: "images/booktracker.png",
 			link: "booktracker.html"
 		},
 		{
 			title: "Delish Scraper",
-			category: "Web Development",
+			category: "Full Stack Development",
 			type: "code",
 			image: "images/delish-scraper.png",
 			link: "delish-scraper.html"
 		},
 		{
 			title: "Heroes United",
-			category: "Web Development",
+			category: "Full Stack Development",
 			type: "code",
 			image: "images/heroes-united.png",
 			link: "heroes-united.html"
 		},
 		{
 			title: "Burger",
-			category: "Web Development",
+			category: "Full Stack Development",
 			type: "code",
 			image: "images/burger2.png",
 			link: "burger.html"
 		},
 		{
 			title: "EventBite",
-			category: "Web Development",
+			category: "Front End Development",
 			type: "code",
 			image: "images/eventbite.png",
 			link: "eventbite.html"
 		},
 		{
 			title: "Train Scheduler",
-			category: "Web Development",
+			category: "Front End Development",
 			type: "code",
 			image: "images/train-scheduler.png",
 			link: "train-scheduler.html"
 		},
-		// {
-		// 	title: "Wikipedia Viewer",
-		// 	category: "Web Development",
-		// 	type: "code",
-		// 	image: "images/wikipedia-viewer3.png",
-		// 	link: "wikipedia-viewer.html"
-		// },
 		{
 			title: "Daily UI Challenge",
 			category: "Visual Design",
