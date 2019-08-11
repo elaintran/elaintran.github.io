@@ -61,7 +61,7 @@
                     <div class="index-tag active"><h6>#jQuery</h6></div>
                     <div class="index-tag active"><h6>#Node.js</h6></div>
 					<div class="index-tag active"><h6>#Express.js</h6></div>
-					<div class="index-tag active"><h6>#Express-Handlebars</h6></div>
+					<div class="index-tag active"><h6>#Handlebars</h6></div>
                     <div class="index-tag active"><h6>#MongoDB</h6></div>
                     <div class="index-tag active"><h6>#Mongoose</h6></div>
                     <div class="index-tag active"><h6>#Axios</h6></div>
@@ -71,35 +71,39 @@
 			<div class="post-content">
 				<div class="description">
 					<h3><b>Delish Scraper</b></h3>
-                    <p>Delish Scraper is a food news and recipe application that scrapes and displays articles pulled from Delish for users to
-                        save into their favorites and add comments. All data from articles and comments are stored in the MongoDB database.
+					<p>Delish Scraper is a food news and recipe scraping application that pulls and displays articles from <a href="https://www.delish.com/" target="_blank">Delish</a>
+						for users to save (or unsave) and add comments either under a name or anonymously. All data from the scraped articles and individual comments
+						are stored in the <a href="https://www.mongodb.com/" target="_blank">MongoDB</a> database.
 					</p>
 					<h4><b>User Stories</b></h4>
 					<p>One of UT Austin Coding Bootcamp’s full-stack assignments is to build a news scraper with the following user stories:</p>
 					<ul>
 						<li>I can click a button and have new articles from a news outlet populate the page.</li>
-                        <li>I can favorite and unfavorite an article and see the states update.</li>
+                        <li>I can favorite and unfavorite an article and see the update occur real-time.</li>
                         <li>I can add comments to any article and see other comments.</li>
 					</ul>
 					<h4><b>Development Process</b></h4>
-					<p>When the Scrape button is clicked, it sends a GET request to pull article information from Delish.
-                        Within that request, another GET request is sent to Axios in order to get the HTML of the webpage
-                        and load the response data into Cheerio. Once loaded, the data becomes targetable by a variable,
-                        similar to jQuery. The information of each article entry is then inserted into MongoDB. Once the
-                        request is complete, the window is reloaded and the new articles are displayed onto the page.
-                        To prevent the same articles from being created in the database, each title property is set as
-                        unique.</p>
-                    <p>Users also have the ability to save and unsave their favorite articles. By clicking the heart icon,
-                        it sends a PUT request to update the saved state. If an article is favorited, the saved state is set
-                        to true and vice versa.</p>
-                    <p>The comment property in the Article model is set to an array instead of object in order to push in
-                        additional comments. When a user submits a comment, a new instance is created in the Comment table
-                        and also pushed into the comment property of the article it was submitted for.</p>
+					<ul>
+						<li>A <code>GET</code> request gets sent when the user clicks on the Scrape button to pull article information
+							from Delish using <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a>. Axios then returns a
+							response that contains the HTML markup from the webpage. The response data is loaded into <a href="https://www.npmjs.com/package/cheerio" target="_blank">
+							Cheerio</a>, a implemention of jQuery within the server side.</li>
+						<li>Targeted data from each article entry is inserted into the <code>Article</code> table inside MongoDB using a <code>create()</code> method.
+							<a href="https://www.npmjs.com/package/express-handlebars" target="_blank">Express-Handlebars</a>, an Express view engine, reloads the page
+							upon every change in the database to display all updated information. To prevent the same articles from being created in the database, each title property is set as
+							unique within the <a href="https://www.npmjs.com/package/mongoose" target="_blank">Mongoose</a> schema. Comments are also associated with each article using the 
+							<code>populate()</code> method.</li>
+						<li>Clicking on the heart icon sends a <code>PUT</code> request to change the saved state of the article using an <code>update()</code> method. If an article is favorited, the saved state is set
+							to true and vice versa.</li>
+						<li>The comment property in the <code>Article</code> model is set to an array. When a user submits a comment, a new instance is inserted in the
+							<code>Comment</code> table using <code>create()</code>. Afterwards, it is then pushed into the comment property of the specific article using a <code>findOneAndUpdate()</code> method,
+							where the article is found by id and updated with <code>$push</code>.</li>
+					</ul>
 				</div>
 			</div>
 			<div class="project-link">
-				<a href="https://delishscraper-ett.herokuapp.com/" target="_blank"><button class="click"><i class=""></i> View Live Demo</button></a>
-				<a href="https://github.com/elaintran/mongo-scraper" target="_blank"><button class="click"><i class="fa fa-github"></i> View on Github</button></a>
+				<a href="https://delishscraper-ett.herokuapp.com/" target="_blank"><button class="click">View Live Demo</button></a>
+				<a href="https://github.com/elaintran/mongo-scraper" target="_blank"><button class="click">View on Github</button></a>
 			</div>
 		</section>
 	</div>
