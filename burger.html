@@ -84,14 +84,14 @@
 					call and manipulate the table data from the database:</p>
 					<ul>
 						<li>A <code>GET</code> request is send upon load from the client side and using a <code>SELECT</code> statement from the server side
-						to pull all of the data from the MySQL table. In this case, it is used to retrieves the information from the <code>burger_menu</code> table
+						to pull all of the data from the MySQL table. In this case, it is used to retrieve the information from the <code>burger_menu</code> table
 						to append on the menu and the <code>burgers</code> table to present the data added from <code>burger_menu</code> in the Order Summary and Purchase History sections.</li>
 						<li>Two <code>POST</code> requests are sent in this application: (1) when custom burgers are added onto the menu
 						via modal and (2) when users select a burger from the menu to add to cart. In order to add the data into the database, an <code>INSERT</code> statement is utilized,
 						followed by the name of the specific table and all of the values.</li>
-						<li>The <code>$.each</code> function is utilized to iterate through the item listings in the cart and send multiple <code>PUT</code> requests in order to
-						update the purchase status of all burgers in that section. An <code>UPDATE</code> statement is called where the devoured value is set to true under the 
-						condition of the id matching the id of the selected row. All of the burgers checked out are then moved to Purchase History.</li>
+						<li>The <code>$.each</code> function is utilized to iterate through the item listings in the cart and send multiple <code>PUT</code> requests to
+						update the purchase status of all burgers in that section. An <code>UPDATE</code> statement is called where the status is set to true if the id sent
+						matches the id of the selected row. All of the burgers checked out are then moved to Purchase History.</li>
 					</ul>
 				</div>
 			</div>
