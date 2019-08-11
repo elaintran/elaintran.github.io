@@ -66,23 +66,32 @@
 			<div class="post-content">
 				<div class="description">
 					<h3><b>Train Scheduler</b></h3>
-					<p>The Train Scheduler is a schedule application that utilizes Firebase and Moment.js to store train data and reflect updates real-time.
-						Users are able to submit train information, including as destination, arrival time, and minutes remaining. Along with that, they can go back and
+					<p>The Train Scheduler is a schedule application that utilizes <a href="https://firebase.google.com/" target="_blank">Firebase</a>
+						and <a href="https://momentjs.com/" target="_blank">Moment.js</a> to store train data, manipulate time, and reflect updates real-time.
+						Users are able to submit train information, including ending destination, arrival time, and minutes remaining. Along with that, they can go back and
 						edit or delete their previously submitted trains from the table.</p>
 					<h4><b>User Stories</b></h4>
 					<p>One of UT Austin Coding Bootcamp’s database projects is to create a train scheduler with the following user stories:</p>
 					<ul>
 						<li>I am able to submit information about my train and see when my train will arrive, relative to current time.</li>
-						<li>I am able to update or remove each train after submission.</li>
+						<li>I am able to update or remove any train after submission.</li>
 					</ul>
 					<h4><b>Development Process</b></h4>
-					<p>Currently in progress. Check back later.</p>
-					<p>Potential updates in the future including confirmation when deleting a train.</p>
+					<p>Firebase is set up and intialized upon the start of the application. In order to retrieve or manipulate the data stored in the database, <code>Firebase.database.Reference</code>
+						must be utilized alongside a method. The following methods were used: </p>
+					<ul>
+						<li>When a train is submitted via modal, the values from the form is added into the database using a <code>push()</code> method. Afterwards, a key is set as a data attribute to the newly added row for future use in editing and deleting specific trains.</li>
+						<li>Editing train information requires both a key inside the <code>ref()</code> to retrieve the data on a selected train and a <code>set()</code> method to update the data.</li>
+						<li>Removing a train from the schedule also requires a key of the selected train and uses a <code>remove()</code> method to delete the train from the database.</li>
+						<li>The <code>on()</code> method is necessary when retrieving the train data. In this case, when a new train is added, <code>on("child_added")</code> would be called. Any changes to the data
+							would use <code>on("child_changed")</code> instead. Following both methods would be <code>function(snapshot)</code>, which pulls certain data values from the database to append onto the page.</li>
+					</ul>
+					<!-- <p>Once a train is added to Firebase, the data has to be called using the </p> -->
 				</div>
 			</div>
 			<div class="project-link">
-				<a href="https://elaintran.github.io/TrainScheduler" target="_blank"><button class="click"><i class=""></i> View Live Demo</button></a>
-				<a href="https://github.com/elaintran/TrainScheduler" target="_blank"><button class="click"><i class="fa fa-github"></i> View on Github</button></a>
+				<a href="https://elaintran.github.io/TrainScheduler" target="_blank"><button class="click">View Live Demo</button></a>
+				<a href="https://github.com/elaintran/TrainScheduler" target="_blank"><button class="click">View on Github</button></a>
 			</div>
 		</section>
 	</div>
