@@ -54,36 +54,43 @@
 			<img src="images/booktracker.png" class="category__image">
 			<div class="project-tag">
 				<div class="tag-list">
-					<div class="index-tag active"><h6>#ReactJS</h6></div>
+					<div class="index-tag active"><h6>#React</h6></div>
+                    <div class="index-tag active"><h6>#Bootstrap</h6></div>
                     <div class="index-tag active"><h6>#Node.js</h6></div>
 					<div class="index-tag active"><h6>#Express.js</h6></div>
 					<div class="index-tag active"><h6>#MongoDB</h6></div>
                     <div class="index-tag active"><h6>#Mongoose</h6></div>
                     <div class="index-tag active"><h6>#Axios</h6></div>
-                    <div class="index-tag active"><h6>#Bootstrap</h6></div>
 				</div>
 			</div>
 			<div class="post-content">
 				<div class="description">
 					<h3><b>BookTracker</b></h3>
-                    <p>BookTracker is a MERN stack application that allows users to search for books via the Google Books API,
-                        add books to their reading list, and monitor their completion status.
+					<p>BookTracker is a MERN stack, single-page application <a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank">(SPA)</a>
+						that allows users to browse books utilizing the <a href="https://developers.google.com/books/" target="_blank">Google Books API</a>,
+						add books to their reading list, and monitor their completion status. All of the saved books are stored in the 
+						<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> database, including the title, author, thumbnail, link, and status.
 					</p>
-					<!-- <h4><b>User Stories</b></h4>
-					<p>One of UT Austin Coding Bootcamp’s full-stack assignments is to build a burger logger with the following user stories:</p>
+					<h4><b>User Stories</b></h4>
+					<p>One of UT Austin Coding Bootcamp’s full-stack assignments is to build a book search engine with the following user stories:</p>
 					<ul>
-						<li>I can select a burger from the menu to add to the cart and checkout all of the items in the cart at once.</li>
-						<li>I can see a list of all of my previous purchases.</li>
+						<li>I can search the Google Books API for books by title and author in the search bar or find books by selecting a tag.</li>
+						<li>I can save and update books according to their completion status and remove books from my saved list.</li>
 					</ul>
 					<h4><b>Development Process</b></h4>
-					<p>The burger application is set up with two tables within MySQL: <code>burger_menu</code> and <code>burgers</code>.</p>
-					<p><code>burger_menu</code> is shown on the page as a visual and displays all of the new and existing burgers. Custom burgers are added onto the menu
-						via modal using a POST request. Users can also select a burger from the menu to add to cart. Once added, the data is send to <code>burgers</code> by
-						issuing another POST request.</p>
-					<p><code>burgers</code> holds the burger data added from <code>burger_menu</code> and the information is presented in the Order Summary
-						and Purchase History sections. The <code>$.each</code> function is utilized to iterate through the item listings in the cart
-						and send multiple PUT requests in order to update the purchase status of all burgers in that section. All of the burgers checked out
-						are then moved to Purchase History.</p> -->
+					<ul>
+						<li>Submitting a search through either the search bar or selecting a tag from the list sends a <code>GET</code> request
+						to <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a> to call the Google Books API. At most 10 results are
+						returned and displayed on the page in card format.</li>
+						<li>The ellipsis on the corner of every result prompts the user to add the selected book into the corresponding section in accordance
+							to completion status. A <code>POST</code> request is sent via Axios and a <code>create()</code> method is called in order to create a new
+							instance in the database. All of the saved books are presented in the <code>/saved</code> route.</li>
+						<li>All of the books in the <code>/saved</code> route are organized according to their completion status: Reading, Plan To Read, and
+							Completed. Selecting the ellipsis in this page allows the user to either move the book to another section or delete the saved book.
+							Moving a book to a different section sends a <code>PUT</code> request to call the <code>update()</code> method to change the
+							completion status. Removing a book sends a <code>DELETE</code> request with a <code>remove()</code> method instead.
+							When the request is finished, a <code>GET</code> request under a <code>findAll()</code> method is sent to redisplay all the updated books.</li>
+					</ul>
 				</div>
 			</div>
 			<div class="project-link">
