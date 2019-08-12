@@ -86,11 +86,10 @@
 					<ul>
 						<li>A <code>GET</code> request gets sent when the user clicks on the Scrape button to pull article information
 							from Delish using <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a>. Axios then returns a
-							response that contains the HTML markup from the webpage. The response data is loaded into <a href="https://www.npmjs.com/package/cheerio" target="_blank">
+							response that contains the HTML markup of the webpage. The response data is loaded into <a href="https://www.npmjs.com/package/cheerio" target="_blank">
 							Cheerio</a>, a implemention of jQuery within the server side.</li>
 						<li>Targeted data from each article entry is inserted into the <code>Article</code> table inside MongoDB using a <code>create()</code> method.
-							<a href="https://www.npmjs.com/package/express-handlebars" target="_blank">Express-Handlebars</a>, an Express view engine, reloads the page
-							upon every change in the database to display all updated information. To prevent the same articles from being created in the database, each title property is set as
+							To prevent the same articles from being created in the database, each title property is set as
 							unique within the <a href="https://www.npmjs.com/package/mongoose" target="_blank">Mongoose</a> schema. Comments are also associated with each article using the 
 							<code>populate()</code> method.</li>
 						<li>Clicking on the heart icon sends a <code>PUT</code> request to change the saved state of the article using an <code>update()</code> method. If an article is favorited, the saved state is set
@@ -98,6 +97,10 @@
 						<li>The comment property in the <code>Article</code> model is set to an array. When a user submits a comment, a new instance is inserted in the
 							<code>Comment</code> table using <code>create()</code>. Afterwards, it is then pushed into the comment property of the specific article using a <code>findOneAndUpdate()</code> method,
 							where the article is found by id and updated with <code>$push</code>.</li>
+						<li><a href="https://www.npmjs.com/package/express-handlebars" target="_blank">Express-Handlebars</a>, an Express view engine, reloads the page
+							upon every change in the database to display all updated information with the assistance of built-in helpers. Helpers such as <code>{{#if}}</code> and 
+							<code>{{#unless}}</code> works as boolean conditionals and renders data accordingly. Some examples are changing the display when toggling between saved states and
+							showing the number of comments per article.</li>
 					</ul>
 				</div>
 			</div>
