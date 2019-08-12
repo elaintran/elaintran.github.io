@@ -80,18 +80,18 @@
 						<li>I can see a list of all of my previous purchases.</li>
 					</ul>
 					<h4><b>Development Process</b></h4>
-					<p>The burger application is set up with two tables within MySQL: <code>burger_menu</code> and <code>burgers</code>. The following requests are used to
-					call and manipulate the table data from the database:</p>
 					<ul>
 						<li>A <code>GET</code> request is send upon load from the client side and using a <code>SELECT</code> statement from the server side
-						to pull all of the data from the MySQL table. In this case, it is used to retrieve the information from the <code>burger_menu</code> table
-						to append on the menu and the <code>burgers</code> table to present the data added from <code>burger_menu</code> in the Order Summary and Purchase History sections.</li>
+						to pull all of the data from the MySQL table. In this case, it is used to retrieve the information from the <code>burger_menu</code> 
+						and the <code>burgers</code> tables to append on the menu and the Order Summary and Purchase History sections respectively.
 						<li>Two <code>POST</code> requests are sent in this application: (1) when custom burgers are added onto the menu
 						via modal and (2) when users select a burger from the menu to add to cart. In order to add the data into the database, an <code>INSERT</code> statement is utilized,
 						followed by the name of the specific table and all of the values.</li>
 						<li>The <code>$.each</code> function is utilized to iterate through the item listings in the cart and send multiple <code>PUT</code> requests to
 						update the purchase status of all burgers in that section. An <code>UPDATE</code> statement is called where the status is set to true if the id sent
 						matches the id of the selected row. All of the burgers checked out are then moved to Purchase History.</li>
+						<li><a href="https://www.npmjs.com/package/express-handlebars" target="_blank">Express-Handlebars</a> renders the burger data using the built-in <code>{{#each}}</code> helper
+							to loop through all the objects from the database, while the <code>{{#if}}</code> and <code>{{#unless}}</code> helpers renders burger data in accordance to their purchase status.</li></li>
 					</ul>
 				</div>
 			</div>
