@@ -79,9 +79,10 @@
 					</ul>
 					<h4><b>Development Process</b></h4>
 					<ul>
-						<li>Submitting a search through either the search bar or selecting a tag from the list sends a <code>GET</code> request
-						to <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a> to call the Google Books API. At most 10 results are
-						returned and displayed on the page in card format.</li>
+						<li>Before submitting a search, the state of query input needs to be updated through incorporating a function that checks the
+							<code>event.target.value</code> inside the input element. Submitting a search through either the search bar or selecting a tag
+							from the list sends a <code>GET</code> request to <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a> to call
+							the Google Books API. At most 10 results are returned and displayed on the page.</li>
 						<li>The ellipsis on the corner of every result prompts the user to add the selected book into the corresponding section in accordance
 							to completion status. A <code>POST</code> request is sent via Axios and a <code>create()</code> method is called in order to create a new
 							instance in the database. All of the saved books are presented in the <code>/saved</code> route.</li>
