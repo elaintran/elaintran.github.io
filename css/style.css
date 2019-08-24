@@ -405,7 +405,7 @@ code {
     }
 } */
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .navbar-nav {
         height: 84vh;
         padding-bottom: 14vh;
