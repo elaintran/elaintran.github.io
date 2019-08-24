@@ -105,6 +105,17 @@ $(document).ready(function() {
 			"scrollTop": $(target).offset().top - 100
 		});
 	});
+
+	$(".navbar-toggler").on("click", function() {
+		var toggleClass = $(this).children();
+		if (toggleClass.attr("class") === "fa fa-bars") {
+			toggleClass.removeClass("fa fa-bars").addClass("fa fa-times");
+			$("body").attr("style", "overflow-y: hidden");
+		} else {
+			toggleClass.removeClass("fa fa-times").addClass("fa fa-bars");
+			$("body").removeAttr("style");
+		}
+	})
 })
 
 //prevent from jumping to the hash immediately on load
