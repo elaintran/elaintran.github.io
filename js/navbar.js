@@ -1,3 +1,5 @@
+var toggle = false;
+
 function checkWidth() {
     if (toggle === true) {
         if (window.matchMedia("(min-width: 767px)").matches) {

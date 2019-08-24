@@ -1,81 +1,4 @@
 $(document).ready(function() {
-	var toggle = false;
-	//display project information onto page
-	var projects = [
-		{
-			title: "BookTracker",
-			category: "Full Stack Development",
-			type: "code",
-			image: "images/booktracker.png",
-			link: "booktracker.html"
-		},
-		{
-			title: "Delish Scraper",
-			category: "Full Stack Development",
-			type: "code",
-			image: "images/delish-scraper.png",
-			link: "delish-scraper.html"
-		},
-		{
-			title: "Heroes United",
-			category: "Full Stack Development",
-			type: "code",
-			image: "images/heroes-united.png",
-			link: "heroes-united.html"
-		},
-		{
-			title: "Burger",
-			category: "Full Stack Development",
-			type: "code",
-			image: "images/burger2.png",
-			link: "burger.html"
-		},
-		{
-			title: "EventBite",
-			category: "Front End Development",
-			type: "code",
-			image: "images/eventbite.png",
-			link: "eventbite.html"
-		},
-		{
-			title: "Train Scheduler",
-			category: "Front End Development",
-			type: "code",
-			image: "images/train-scheduler.png",
-			link: "train-scheduler.html"
-		},
-		{
-			title: "Daily UI Challenge",
-			category: "Visual Design",
-			type: "design",
-			image: "images/daily-ui-day-one2.png",
-			link: "daily-ui-challenge.html"
-		},
-	];
-
-	function projectDisplay() {
-		for (var i = 0; i < projects.length; i++) {
-			var col = $("<div>").addClass("col-sm-6 " + projects[i].type);
-			var projectContent = $("<div>").addClass("project project-item");
-			var img = $("<img>").attr("src", projects[i].image).addClass("category__image");
-			var link = $("<a>").attr("href", projects[i].link);
-			var projectName = $("<h3>").text(projects[i].title);
-			var projectCategory = $("<h5>").text(projects[i].category);
-			var figcaption = $("<figcaption>").append(projectName).append(projectCategory);
-			link.append(figcaption);
-			projectContent.append(img).append(link);
-			col.append(projectContent);
-			$("#portfolio .row").append(col);
-		}
-		//scroll down to portfolio section
-		setTimeout(function() {
-			$("html, body").animate({
-				"scrollTop": $(location.hash).offset().top - 100
-			});
-		}, 1)
-	}
-	projectDisplay();
-
 	//tag toggle
 	$(".all-tag").on("click", function() {
 		activeTags(".all-tag", ".code-tag", ".design-tag", ".code", ".design");
@@ -108,9 +31,8 @@ $(document).ready(function() {
 	});
 })
 
-//prevent from jumping to the hash immediately on load
-if (location.hash) {
-	setTimeout(function() {
-	  window.scrollTo(0, 0);
-	}, 1);
+if (location.hash === "#portfolio") {
+	$("html, body").animate({
+		"scrollTop": $(location.hash).offset().top - 100
+	});
 }
