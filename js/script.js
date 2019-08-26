@@ -31,6 +31,8 @@ $(document).ready(function() {
 	});
 })
 
+//smooth scroll to portfolio on load
+//placed outside document.ready because if placed inside, the page will jump to the hash without waiting for scroll to run
 if (location.hash === "#portfolio") {
 	$("html, body").animate({
 		"scrollTop": $(location.hash).offset().top - 100
