@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>fuelup.</title>
+    
+	<!-- Metadata -->
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	
+	<!--Javascript-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="images/favicon.png"/>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: white;">
+		<a class="navbar-brand" href="index.html">elain.</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fa fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav ml-auto">
+				<div class="underline"><a href="about.html" class="nav-link menu">About</a></div>
+				<div class="underline"><a href="index.html#portfolio" class="nav-link menu">Work</a></div>
+				<div class="underline"><a href="elain-tran-resume.pdf" class="nav-link menu" target="_blank">Resume</a></div>
+			</div>
+		</div>
+	</nav>
+	<!--End Navigation-->
+		
+	<!--fuelup.-->
+	<div class="section-container">
+		<section id="portfolio" class="container project-section">
+			<img src="images/fuelup.png" class="category__image">
+			<div class="project-tag">
+				<div class="tag-list">
+					<div class="index-tag active"><h6>#React</h6></div>
+					<div class="index-tag active"><h6>#Semantic UI</h6></div>
+					<div class="index-tag active"><h6>#Node.js</h6></div>
+					<div class="index-tag active"><h6>#Express.js</h6></div>
+                    <div class="index-tag active"><h6>#MongoDB</h6></div>
+                    <div class="index-tag active"><h6>#Mongoose</h6></div>
+                    <div class="index-tag active"><h6>#Axios</h6></div>
+                    <div class="index-tag active"><h6>#Cheerio</h6></div>
+                    <div class="index-tag active"><h6>#Passport.js</h6></div>
+                    <div class="index-tag active"><h6>#BcryptJS</h6></div>
+                    <div class="index-tag active"><h6>#Mapbox GL</h6></div>
+				</div>
+			</div>
+			<div class="post-content">
+				<div class="description">
+					<h3><b>FuelUp</b></h3>
+                    <p>FuelUp is a React-based application that allows users to search and navigate to gas stations with the cheapest gas.
+                        Features include locating the user's coordinates upon load through the
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API" target="_blank">HTML5 Geolocation API</a> to
+                        find accurate stations in the area, displaying the gas price markers according to station location on
+                        <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, filtering station
+                        results by fuel type and brand and updating the map accordingly, and saving favorite stations through an optional
+                        account creation with user authentication and password encryption via <a href="http://www.passportjs.org/" target="_blank">
+                        Passport.js</a> and <a href="https://www.npmjs.com/package/bcryptjs" target="_blank">BcryptJS</a>.
+                        </p>
+                    <h4><b>Problem</b></h4>
+                    <p>When it comes to other gas price search applications, the user would need to go through a series of clicks in order to get
+                        the information for all fuel types, visualize the results on a map, and navigate to the station. It would be much more advantageous
+                        to have an application that does the following: 
+						<ul>
+							<li>Display the results in both list and map format on one page, including station name, location, and prices for all fuel types.</li>
+							<li>Dynamically update the page through filtering stations by fuel type, brand, or, if the user has an account, location.</li>
+                            <li>Open up a new window or application to Google Maps when the user chooses to get directions to a station.</li>
+                            <li>Add and remove stations from favorites and visualize all favorites if the user has an account.</li>
+						</ul>
+                    <h4><b>Development Process</b></h4>
+                    <p>The structure of the application was designed so that users have access to the most important features at the very beginning instead of creating
+                        an account just to test out the functionalities. Here's the breakdown for FuelUp's general development:</p>
+                    <ul>
+                        <li><b>Finding a source.</b> <a href="https://www.gasbuddy.com/" target="_blank">GasBuddy</a> is the most reliable source that offered
+                        real-time fuel prices, however it comes with its own limitations. GasBuddy itself is not 100% accurate- the fuel prices presented is supplied through
+                        crowdsourcing means. Along with that, there is a lack of API for the information. Seeing that this was the
+                        closest I could get to retrieving accurate and up-to-date results, I opted to scrape all of the general gas station information from the site.</li>
+                        <li><b>Getting the user's current position.</b> The HTML5 Geolocation API retrieves the user's longitude and latitude coordinates if the user
+                        allows the browser to receive their location. The coordinates are sent to the <a href="https://docs.mapbox.com/api/search/#geocoding" target="_blank">
+                        Mapbox Geocoding API</a> to be converted into a zipcode, and then passed as a endpoint for <a href="https://www.npmjs.com/package/axios" target="_blank">
+                        Axios</a>. Otherwise, Austin's zipcode, <code>78753</code>, will be used as a parameter for the call instead.</li>
+                        <li><b>Scraping from GasBuddy.</b> The endpoint is provided by the geolocator or the default city upon load or through search submission afterwards.
+                        The <code>GET</code> request was set up through Axios to GasBuddy on the server-side instead of the client-side due to <code>CORS</code>
+                        issues. The page was then loaded into <a href="https://www.npmjs.com/package/cheerio" target="_blank">Cheerio</a> where the information becomes targetable through <code>jQuery</code> functions. GasBuddy doesn't display the prices
+                        for all fuel prices for the results on the same page, so multiple asynchronous Axios calls was made to retrieve all the prices from different pages.
+                        The station information was placed in an object array and sent back to the client-side.</li>
+                        <li><b>Converting the location.</b> The results were mapped through in order to find the station address. The station address is sent to the
+                        Mapbox Geocoding API to be converted into longitude and latitude coordinates. The coordinates are then used to determine the position of the markers
+                        on the map.</li>
+                        <li><b>Filtering the results.</b> The filters applied were through conditionals determined by the text of the dropdown. As the filters are applied,
+                        the results are sorted by the lowest price of the category and the prices on the map updates depending on the fuel type selected. The filters are
+                        reset back to their default placeholder once the user submits a new search.</li>
+                    </ul>
+                    <p>In addition to FuelUp's search and navigation features, creating an account also allows users to add stations from the homepage into their favorites. They
+                        also have access to a new page listing all of their saved favorites in a similar format to the homepage.</p>
+                    <ul>
+                        <li><b>Creating an account.</b> User authentication is set up through Passport.js and the user information is stored in the <a href="https://www.mongodb.com/" target="_blank">
+                        MongoDB</a> database. Before the
+                        account is saved in the database, the password submitted is hashed through BcryptJS. Emails are unique, so the same email cannot be stored in the database.</li>
+                        <li><b>Saving to favorites.</b> Once the user has either created an account or logged in, they can favorite their stations displayed on the homepage.
+                        They can also see the stations they have saved previously to prevent double submission. If a station is saved, a <code>POST</code> request is sent to store the
+                        station information in the <code>Station</code> table. Afterwards, a <code>findOneAndUpdate()</code> method is called and the station id is inserted through
+                        <code>$push</code>. Since the address to the stations are unique, if it matches the address from the saved stations, the heart next to the station name will be filled.</li>
+                        <li><b>Removing from favorites.</b> The id of the favorited station is sent as a <code>prop</code> through the components. If the user reselects a filled heart, a <code>DELETE</code>
+                        request will be sent to remove the station from the database by id. As a result, the filled heart will turn back to an outline.</li>
+                    </ul>
+				</div>
+			</div>
+			<div class="project-link">
+				<a href="https://fuelup.herokuapp.com/" target="_blank"><button class="click">View Live Demo</button></a>
+				<a href="https://github.com/elaintran/fuelup" target="_blank"><button class="click">View on Github</button></a>
+			</div>
+		</section>
+	</div>
+	<!--End fuelup.-->
+
+	<!--Social Icons-->
+	<footer>
+		<div class="section-container">
+			<div class="social-media-bar">
+				<a href="mailto:elain.ttran@gmail.com"><i class="fa fa-envelope"></i></a> 
+				<a href="https://facebook.com/elainttran" target="_blank"><i class="fa fa-facebook"></i></a>  
+				<a href="https://instagram.com/journeywithelain" target="_blank"><i class="fa fa-instagram"></i></a>
+				<a href="https://github.com/elaintran" target="_blank"><i class="fa fa-github"></i></a>
+				<a href="https://www.linkedin.com/in/elaintran" target="_blank"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!--End Social Icons-->
+
+	<!--Javascript-->
+	<script type="text/javascript" src="js/navbar.js"></script>
+
+</body>
+</html>
